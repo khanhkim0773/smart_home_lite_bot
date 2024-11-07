@@ -1,0 +1,7 @@
+devices:
+- name: đèn
+  status: bật
+- name: quạt
+  status: bật
+- name: điều hòa
+  status: bật

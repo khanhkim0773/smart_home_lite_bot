@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+  - rule: Turn on device
+    steps:
+      - intent: turn_on_device
+      - action: action_toggle_device
+
+  - rule: Turn off device
+    steps:
+      - intent: turn_off_device
+      - action: action_toggle_device
+
+  - rule: Check device status
+    steps:
+      - intent: check_status
+      - action: action_check_status
+
+  - rule: Greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+      
+  - rule: Adjust brightness
+    steps:
+      - intent: adjust_brightness
+      - action: utter_brightness_adjusted
+
+  - rule: Schedule device
+    steps:
+      - intent: schedule_device
+      - action: utter_device_scheduled
+
+  - rule: Adjust temperature
+    steps:
+      - intent: adjust_temperature
+      - action: utter_temperature_adjusted
+
+  - rule: Play music
+    steps:
+      - intent: play_music
+      - action: utter_music_playing
+
+  - rule: Stop music
+    steps:
+      - intent: stop_music  # Changed from play_music to stop_music
+      - action: utter_music_stopped
+
+  - rule: Goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye

@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories: null 
+  # - story: turn on device
+  #   steps:
+  #     - intent: turn_on_device
+  #     - action: action_toggle_device
+
+  # - story: turn off device
+  #   steps:
+  #     - intent: turn_off_device
+  #     - action: action_toggle_device
+
+  # - story: check device status
+  #   steps:
+  #     - intent: check_status
+  #     - action: action_check_status
+
+  # - story: say goodbye
+  #   steps:
+  #     - intent: goodbye
+  #     - action: utter_goodbye
+
+  # - story: user adjusts brightness
+  #   steps:
+  #     - intent: adjust_brightness
+  #     - action: utter_brightness_adjusted
+
+  # - story: user sets timer
+  #   steps:
+  #     - intent: set_timer
+  #     - action: utter_timer_set
+
+  # - story: user schedules device
+  #   steps:
+  #     - intent: schedule_device
+  #     - action: utter_device_scheduled
+
+  # - story: user adjusts temperature
+  #   steps:
+  #     - intent: adjust_temperature
+  #     - action: utter_temperature_adjusted
+      
+  # - story: user plays music
+  #   steps:
+  #     - intent: play_music
+  #     - action: utter_music_playing
+
+  # - story: user stops music
+  #   steps:
+  #     - intent: stop_music  # Changed from play_music to stop_music
+  #     - action: utter_music_stopped

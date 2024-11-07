@@ -1,0 +1,16 @@
+FROM rasa/rasa:latest
+
+# Thiết lập thư mục làm việc
+WORKDIR /app
+
+# Sao chép tất cả các tệp vào container
+COPY . /app
+
+# Cài đặt các thư viện cần thiết
+RUN pip install -r requirements.txt
+
+# Mở cổng cho API Rasa
+EXPOSE 5005
+
+# Khởi động server Rasa
+CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]

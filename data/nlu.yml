@@ -1,0 +1,71 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Chào
+    - Xin chào
+    - Hello
+    - Hi
+
+- intent: turn_on_device
+  examples: |
+    - Bật [đèn](device)
+    - Bật [điều hòa](device)
+    - Bật [quạt](device)
+
+- intent: turn_off_device
+  examples: |
+    - Tắt [đèn](device)
+    - Tắt [điều hòa](device)
+    - Tắt [quạt](device)
+
+- intent: check_status
+  examples: |
+    - trạng thái [đèn](device)
+    - trạng thái [điều hòa](device)
+    - trạng thái [quạt](device)
+
+    - Đèn [đèn](device) đang bật hay tắt?
+    - Đèn [điều hòa](device) đang bật hay tắt?
+    - Đèn [quạt](device) đang bật hay tắt?
+    - Quạt [quạt](device) có đang chạy không?
+    - Quạt [điều hòa](device) có đang chạy không?
+    - Quạt [đèn](device) có đang chạy không?
+    - Kiểm tra [điều hòa](device)
+    - Kiểm tra [quạt](device)
+    - Kiểm tra [đèn](device)
+
+- intent: adjust_brightness
+  examples: |
+    - Giảm độ sáng của [đèn](device)
+    - Tăng độ sáng của [đèn](device) lên mức cao nhất
+    - Điều chỉnh độ sáng [đèn](device)
+
+- intent: schedule_device
+  examples: |
+    - Hẹn giờ tắt [đèn](device)  sau 1 giờ
+    - Hẹn giờ tắt [quạt](device) tắt sau 1 giờ
+    - Hẹn giờ tắt [điều hòa](device) tắt sau 1 giờ
+
+- intent: adjust_temperature
+  examples: |
+    - Giảm nhiệt độ của [điều hòa](device)
+    - Tăng nhiệt độ của [điều hòa ]device)
+    - Cài đặt nhiệt độ [điều hòa](device) ở mức thấp nhất
+
+- intent: play_music
+  examples: |
+    - Bật nhạc trong [phòng khách](room)
+    - Bật playlist nhạc thư giãn trong [phòng khách](room)
+
+- intent: stop_music
+  examples: |
+    - Tắt nhạc
+    - Tắt nhạc ở [phòng ngủ](room)
+
+- intent: goodbye
+  examples: |
+    - Tạm biệt
+    - Hẹn gặp lại
+    - Chúc bạn một ngày tốt lành

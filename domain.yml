@@ -1,0 +1,70 @@
+version: "3.1"
+
+intents:
+  - greet
+  - turn_on_device
+  - turn_off_device
+  - check_status
+  - adjust_brightness
+  - schedule_device
+  - adjust_temperature
+  - play_music
+  - stop_music
+  - goodbye
+
+
+entities:
+  - device
+  - room
+
+slots:
+  device:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: device
+
+  room:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: room
+
+responses:
+  utter_greet:
+    - text: 'Chào bạn, tôi có thể giúp gì cho bạn!'
+
+  utter_turn_on_device:
+    - text: '{device} đã được bật theo như yêu cầu của bạn.'
+
+  utter_turn_off_device:
+    - text: '{device} đã được tắt theo như yêu cầu của bạn.'
+
+  utter_brightness_adjusted:
+    - text: "Đã điều chỉnh độ sáng của {device}."
+  
+  utter_device_scheduled:
+    - text: "Theo như yêu cầu của bạn, đã lên lịch cho {device}"
+
+  utter_temperature_adjusted:
+    - text: "Nhiệt độ của {device} đã được điều chỉnh."
+
+
+
+  utter_music_playing:
+    - text: "Đang phát nhạc trong {room}."
+  utter_music_stopped:
+    - text: "Nhạc đã được tắt."
+    - text: "Nhạc trong {room} đã được tắt."
+
+  utter_goodbye:
+    - text: 'Tạm biệt! Hẹn gặp lại bạn. Chúc bạn một ngày tốt lành!'
+actions:
+  - action_toggle_device
+  - action_check_status 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
